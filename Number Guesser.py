@@ -21,8 +21,8 @@ class Game:
 		
 		def playGame(self):
 			self.time_begin = time()
+			self.answer = randint(1, int(self.highest_num))
 			while True:
-				self.answer = randint(1, int(self.highest_num))
 				self.choice = int(raw_input("Enter Number: "))
 				if self.choice < self.answer:
 					print("Your number is too low!")
@@ -33,7 +33,7 @@ class Game:
 					self.time_end = time()
 					self.TotalTime = str(int(self.time_end - self.time_begin))
 					print("It took you %s seconds") % self.TotalTime
-					print("\n\n")
+					print("\n")
 					self.main()
 
 if __name__ == "__main__":
